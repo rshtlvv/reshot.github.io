@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Обо мне — reshop</title>
+  <meta name="description" content="reshot — владелец reshop. Продаю предметы Dota 2 с 2019 года: арканы, имморталы и редкие сеты с ручной проверкой и связью в Telegram.">
+  <meta name="theme-color" content="#07080b">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Обо мне — reshop">
+  <meta property="og:description" content="Небольшая мастерская предметов Dota 2: честный обмен, быстрая выдача, живая связь.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/unbounded-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-page="about">
+
+<div class="progress" aria-hidden="true"></div>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html" aria-label="reshop — на главную">
+      <svg class="brand__mark" viewBox="0 0 36 36" width="36" height="36" aria-hidden="true">
+        <defs>
+          <linearGradient id="brandGrad" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#f26982"></stop>
+            <stop offset="1" stop-color="#bf2b45"></stop>
+          </linearGradient>
+        </defs>
+        <rect width="36" height="36" rx="10" fill="url(#brandGrad)"></rect>
+        <path d="M12.4 26V10h7.2c3.35 0 5.5 1.9 5.5 5 0 2.32-1.3 3.94-3.5 4.62L25.2 26h-4.05l-2.98-6.05h-2.1V26h-3.66Zm3.66-8.9h3.06c1.48 0 2.4-.8 2.4-2.1s-.92-2.1-2.4-2.1h-3.06v4.2Z" fill="#0a0b0f"></path>
+      </svg>
+      <span class="brand__text"><span data-site-name>reshop</span><span class="brand__dot">.</span></span>
+      <span class="brand__tag">dota 2 store</span>
+    </a>
+
+    <nav class="nav" aria-label="Основная навигация">
+      <a class="nav__link" href="index.html">Каталог</a>
+      <a class="nav__link is-active" href="about.html" aria-current="page">Обо мне</a>
+    </nav>
+
+    <div class="header__actions">
+      <a class="draft-chip" data-draft-chip href="admin.html" hidden><span>Черновик</span></a>
+      <a class="btn btn--ghost btn--sm header__tg" data-telegram href="https://t.me/reshot" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.04 15.47l-.38 5.34c.54 0 .78-.23 1.06-.5l2.55-2.44 5.29 3.87c.97.53 1.66.25 1.92-.9L22.9 3.9c.31-1.42-.51-1.98-1.45-1.63L2.5 9.45c-1.39.54-1.37 1.31-.24 1.66l4.83 1.51L18.3 5.5c.52-.35 1-.16.61.19l-8.87 8.01z"></path></svg>
+        <span>Telegram</span>
+      </a>
+      <a class="icon-btn" href="admin.html" aria-label="Админ-панель" title="Админ-панель">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.6"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+      </a>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <nav class="menu__list" aria-label="Мобильная навигация">
+    <div class="menu__item" style="--i:0"><a class="menu__link" href="index.html"><span>01</span>Каталог</a></div>
+    <div class="menu__item" style="--i:1"><a class="menu__link" href="about.html"><span>02</span>Обо мне</a></div>
+    <div class="menu__item" style="--i:2"><a class="menu__link" href="admin.html"><span>03</span>Админка</a></div>
+  </nav>
+  <div class="menu__foot">
+    <a class="btn btn--primary" data-telegram href="https://t.me/reshot" target="_blank" rel="noopener">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.04 15.47l-.38 5.34c.54 0 .78-.23 1.06-.5l2.55-2.44 5.29 3.87c.97.53 1.66.25 1.92-.9L22.9 3.9c.31-1.42-.51-1.98-1.45-1.63L2.5 9.45c-1.39.54-1.37 1.31-.24 1.66l4.83 1.51L18.3 5.5c.52-.35 1-.16.61.19l-8.87 8.01z"></path></svg>
+      Написать в Telegram
+    </a>
+    <div class="menu__socials"><span>reshop · dota 2 store</span><a href="about.html">Обо мне</a></div>
+  </div>
+</div>
+
+<main>
+  <section class="page-hero">
+    <div class="container about-grid">
+      <div>
+        <div class="eyebrow eyebrow--dot" data-about-eyebrow>Обо мне</div>
+        <h1 class="about-title" data-about-title>Привет, я <span class="accent">reshot</span></h1>
+        <p class="about-lead" data-about-lead></p>
+        <div class="about-text" data-about-text></div>
+        <div class="about-actions">
+          <a class="btn btn--primary" data-telegram href="https://t.me/reshot" target="_blank" rel="noopener">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.04 15.47l-.38 5.34c.54 0 .78-.23 1.06-.5l2.55-2.44 5.29 3.87c.97.53 1.66.25 1.92-.9L22.9 3.9c.31-1.42-.51-1.98-1.45-1.63L2.5 9.45c-1.39.54-1.37 1.31-.24 1.66l4.83 1.51L18.3 5.5c.52-.35 1-.16.61.19l-8.87 8.01z"></path></svg>
+            Написать в Telegram
+          </a>
+          <a class="btn btn--ghost" href="index.html">
+            Смотреть каталог
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <aside class="profile" data-reveal>
+        <div class="profile__top">
+          <div class="profile__avatar" data-about-avatar>R</div>
+          <div>
+            <div class="profile__name" data-about-name>@reshot</div>
+            <div class="profile__role" data-about-role></div>
+          </div>
+        </div>
+        <div class="profile__status">На связи · отвечаю в течение часа</div>
+        <div class="profile__skills">
+          <span>Арканы</span><span>Имморталы</span><span>Steam Trade</span><span>Гарант</span>
+        </div>
+        <a class="btn btn--primary" data-telegram href="https://t.me/reshot" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.04 15.47l-.38 5.34c.54 0 .78-.23 1.06-.5l2.55-2.44 5.29 3.87c.97.53 1.66.25 1.92-.9L22.9 3.9c.31-1.42-.51-1.98-1.45-1.63L2.5 9.45c-1.39.54-1.37 1.31-.24 1.66l4.83 1.51L18.3 5.5c.52-.35 1-.16.61.19l-8.87 8.01z"></path></svg>
+          Написать в Telegram
+        </a>
+      </aside>
+    </div>
+
+    <div class="container">
+      <div class="stats" data-about-stats></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow eyebrow--dot">Как это работает</div>
+          <h2>Три шага до предмета</h2>
+          <p class="section-head__note">Без ожидания, скрытых комиссий и переписок на неделю.</p>
+        </div>
+      </div>
+      <div class="steps" data-about-steps></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head" style="justify-content:center;text-align:center;">
+        <div>
+          <div class="eyebrow eyebrow--dot" style="justify-content:center;">FAQ</div>
+          <h2>Частые вопросы</h2>
+        </div>
+      </div>
+      <div class="faq" data-about-faq></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="cta">
+        <img class="cta__art" data-cta-art alt="" aria-hidden="true">
+        <div class="cta__content">
+          <div class="eyebrow eyebrow--dot">Telegram</div>
+          <h2 data-cta-title>Готов к сделке?</h2>
+          <p data-cta-text></p>
+          <a class="btn btn--primary" data-telegram href="https://t.me/reshot" target="_blank" rel="noopener">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.04 15.47l-.38 5.34c.54 0 .78-.23 1.06-.5l2.55-2.44 5.29 3.87c.97.53 1.66.25 1.92-.9L22.9 3.9c.31-1.42-.51-1.98-1.45-1.63L2.5 9.45c-1.39.54-1.37 1.31-.24 1.66l4.83 1.51L18.3 5.5c.52-.35 1-.16.61.19l-8.87 8.01z"></path></svg>
+            Написать в Telegram
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html" aria-label="reshop — на главную">
+          <svg class="brand__mark" viewBox="0 0 36 36" width="36" height="36" aria-hidden="true">
+            <rect width="36" height="36" rx="10" fill="url(#brandGrad)"></rect>
+            <path d="M12.4 26V10h7.2c3.35 0 5.5 1.9 5.5 5 0 2.32-1.3 3.94-3.5 4.62L25.2 26h-4.05l-2.98-6.05h-2.1V26h-3.66Zm3.66-8.9h3.06c1.48 0 2.4-.8 2.4-2.1s-.92-2.1-2.4-2.1h-3.06v4.2Z" fill="#0a0b0f"></path>
+          </svg>
+          <span class="brand__text"><span data-site-name>reshop</span><span class="brand__dot">.</span></span>
+        </a>
+        <p data-footer-note>Независимый магазин предметов Dota 2. Не связан с Valve Corporation.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="index.html">Каталог</a></li>
+          <li><a href="about.html">Обо мне</a></li>
+          <li><a href="admin.html">Админ-панель</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Связь</h4>
+        <ul>
+          <li><a data-telegram href="https://t.me/reshot" target="_blank" rel="noopener">Telegram</a></li>
+          <li><a href="https://steamcommunity.com/" target="_blank" rel="noopener">Steam</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> reshop · предметы Dota 2</span>
+      <span>Сделано с любовью к игре</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/seed.js" defer></script>
+<script src="assets/js/core.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

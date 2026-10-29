@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Админ-панель — reshop</title>
+  <meta name="theme-color" content="#07080b">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/unbounded-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body class="admin">
+
+<!-- ---------- вход ---------- -->
+
+<section class="auth" id="auth">
+  <div class="auth__card">
+    <div class="auth__brand">
+      <svg class="brand__mark" viewBox="0 0 36 36" width="34" height="34" aria-hidden="true">
+        <defs>
+          <linearGradient id="brandGrad" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#f26982"></stop>
+            <stop offset="1" stop-color="#bf2b45"></stop>
+          </linearGradient>
+        </defs>
+        <rect width="36" height="36" rx="10" fill="url(#brandGrad)"></rect>
+        <path d="M12.4 26V10h7.2c3.35 0 5.5 1.9 5.5 5 0 2.32-1.3 3.94-3.5 4.62L25.2 26h-4.05l-2.98-6.05h-2.1V26h-3.66Zm3.66-8.9h3.06c1.48 0 2.4-.8 2.4-2.1s-.92-2.1-2.4-2.1h-3.06v4.2Z" fill="#0a0b0f"></path>
+      </svg>
+      <span class="brand__text" style="font-size:19px">reshop<span class="brand__dot">.</span></span>
+    </div>
+    <h1>Админ-панель</h1>
+    <p>Управление каталогом и страницей «Обо мне»</p>
+    <form class="auth__form" id="login-form">
+      <label class="label" for="login-password">Пароль
+        <input class="input" type="password" id="login-password" autocomplete="current-password" required>
+      </label>
+      <p class="auth__error" id="login-error" hidden>Неверный пароль</p>
+      <button class="btn btn--primary btn--block" type="submit" id="login-btn">Войти</button>
+    </form>
+    <p class="auth__hint">Пароль по умолчанию — <code>reshop</code>. Смените его в настройках после первого входа. Пароль защищает только интерфейс: данные сохраняются в браузере, а публикация идёт через ваш GitHub-токен.</p>
+    <a class="auth__back" href="index.html">← Вернуться на сайт</a>
+  </div>
+</section>
+
+<!-- ---------- приложение ---------- -->
+
+<div class="admin-shell" id="app" hidden>
+  <aside class="admin-side">
+    <div class="admin-brand">
+      <svg class="brand__mark" viewBox="0 0 36 36" width="32" height="32" aria-hidden="true">
+        <defs>
+          <linearGradient id="brandGradSide" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#f26982"></stop>
+            <stop offset="1" stop-color="#bf2b45"></stop>
+          </linearGradient>
+        </defs>
+        <rect width="36" height="36" rx="10" fill="url(#brandGradSide)"></rect>
+        <path d="M12.4 26V10h7.2c3.35 0 5.5 1.9 5.5 5 0 2.32-1.3 3.94-3.5 4.62L25.2 26h-4.05l-2.98-6.05h-2.1V26h-3.66Zm3.66-8.9h3.06c1.48 0 2.4-.8 2.4-2.1s-.92-2.1-2.4-2.1h-3.06v4.2Z" fill="#0a0b0f"></path>
+      </svg>
+      <span class="admin-brand__text">reshop.<small>admin panel</small></span>
+    </div>
+
+    <nav class="admin-nav" aria-label="Разделы админки">
+      <a href="#items" data-tab="items">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9Z"></path><path d="m4 7.5 8 4.5 8-4.5M12 12v9"></path></svg>
+        Предметы
+        <span class="admin-nav__count" id="nav-items-count">0</span>
+      </a>
+      <a href="#about" data-tab="about">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="3.6"></circle><path d="M5 20c.6-3.6 3.4-5.4 7-5.4s6.4 1.8 7 5.4"></path></svg>
+        Обо мне
+      </a>
+      <a href="#settings" data-tab="settings">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1.11-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.6 8.9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 8.96 4.6H9a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87V9a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1Z"></path></svg>
+        Настройки
+      </a>
+    </nav>
+
+    <div class="admin-sync" id="sync-card">
+      <div class="admin-sync__head"><span class="admin-sync__dot"></span><span id="sync-label">Демо-режим</span></div>
+      <p id="sync-note">Правки сохраняются только в этом браузере.</p>
+      <button class="btn btn--primary btn--block" type="button" data-publish>Опубликовать</button>
+      <a class="admin-sync__link" id="pages-link" href="#" target="_blank" rel="noopener" hidden>Открыть сайт на GitHub Pages ↗</a>
+    </div>
+
+    <div class="admin-side__foot">
+      <a href="index.html">← На сайт</a>
+      <button type="button" id="logout">Выйти</button>
+    </div>
+  </aside>
+
+  <main class="admin-main">
+    <header class="admin-top">
+      <div>
+        <div class="admin-top__eyebrow">reshop · управление</div>
+        <h1 id="view-title">Предметы</h1>
+      </div>
+      <div class="admin-top__actions">
+        <span class="save-state" id="save-state"></span>
+        <span class="admin-badge" id="dirty-badge" hidden>Есть изменения</span>
+        <button class="btn btn--primary btn--sm" type="button" data-publish>Опубликовать</button>
+        <a class="icon-btn" href="index.html" target="_blank" rel="noopener" aria-label="Открыть сайт" title="Открыть сайт">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path></svg>
+        </a>
+      </div>
+    </header>
+
+    <div class="admin-view" id="view"></div>
+  </main>
+</div>
+
+<!-- ---------- редактор предмета ---------- -->
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer__scrim" id="drawer-scrim"></div>
+  <form class="drawer__panel" id="item-form" novalidate>
+    <div class="drawer__head">
+      <div>
+        <div class="drawer__eyebrow" id="drawer-mode">Новый предмет</div>
+        <h2 id="drawer-title">Добавить предмет</h2>
+      </div>
+      <button class="icon-btn" type="button" id="drawer-close" aria-label="Закрыть">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="m4 4 8 8M12 4l-8 8"></path></svg>
+      </button>
+    </div>
+
+    <div class="drawer__body">
+      <div class="drop" id="drop">
+        <input type="file" id="f-file" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+        <img id="f-preview" alt="" hidden>
+        <div class="drop__empty" id="f-empty">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"></rect><circle cx="9" cy="9.5" r="1.6"></circle><path d="m4 17 5-5 4 4 3-3 4 4"></path></svg>
+          <b>Перетащите изображение</b>
+          <span>или нажмите, чтобы выбрать · PNG, JPG, WebP</span>
+        </div>
+        <div class="drop__overlay">
+          <button type="button" id="f-pick">Загрузить</button>
+          <button type="button" id="f-remove">Удалить</button>
+        </div>
+      </div>
+      <div class="image-note" id="image-note">Изображение сохраняется вместе с данными предмета</div>
+
+      <label class="label" for="f-image">Ссылка на изображение
+        <input class="input" id="f-image" placeholder="assets/items/… или https://…" autocomplete="off">
+      </label>
+
+      <div class="form-grid">
+        <label class="label span-2" for="f-name">Название
+          <input class="input" id="f-name" required placeholder="Demon Eater">
+        </label>
+        <div class="color-tools span-2" data-color-for="f-name">
+          <input type="color" class="color-input" value="#ade55c" aria-label="Цвет текста названия">
+          <button type="button" class="color-insert" data-insert-color="f-name">Вставить цвет в название</button>
+          <span class="color-tools__hint">выделите слово → <code>{#ADE55C}слово{/}</code></span>
+        </div>
+        <label class="label" for="f-hero">Герой
+          <input class="input" id="f-hero" list="hero-options" placeholder="Shadow Fiend" autocomplete="off">
+        </label>
+        <label class="label" for="f-slot">Слот
+          <input class="input" id="f-slot" placeholder="Голова" autocomplete="off">
+        </label>
+        <label class="label" for="f-rarity">Редкость
+          <select class="input" id="f-rarity"></select>
+        </label>
+        <label class="label" for="f-status">Статус
+          <select class="input" id="f-status"></select>
+        </label>
+        <label class="label" for="f-price">Цена, ₽
+          <input class="input" id="f-price" type="number" min="0" step="10" placeholder="2990">
+        </label>
+        <label class="label" for="f-old-price">Старая цена, ₽
+          <input class="input" id="f-old-price" type="number" min="0" step="10" placeholder="3490">
+        </label>
+        <label class="label" for="f-stock">Количество в наличии
+          <input class="input" id="f-stock" type="number" min="0" step="1" value="1" placeholder="1">
+        </label>
+        <label class="label" for="f-color">Свой цвет (HEX) <span class="hint">пусто — цвет редкости</span>
+          <span class="color-field">
+            <input class="input" id="f-color" placeholder="#ADE55C" maxlength="7" autocomplete="off">
+            <input type="color" class="color-input" id="f-color-pick" value="#ade55c" aria-label="Выбрать цвет">
+            <button class="mini-btn" type="button" id="f-color-clear" aria-label="Сбросить цвет" title="Сбросить">×</button>
+          </span>
+        </label>
+        <label class="label span-2" for="f-description">Описание
+          <textarea class="input" id="f-description" rows="3" placeholder="Что входит в предмет и как проходит передача"></textarea>
+        </label>
+        <div class="color-tools span-2" data-color-for="f-description">
+          <input type="color" class="color-input" value="#ade55c" aria-label="Цвет текста описания">
+          <button type="button" class="color-insert" data-insert-color="f-description">Вставить цвет в описание</button>
+          <span class="color-tools__hint">выделите фразу → <code>{#ADE55C}фраза{/}</code></span>
+        </div>
+        <label class="label span-2" for="f-telegram">Своя ссылка Telegram <span class="hint">необязательно — иначе берётся общая</span>
+          <input class="input" id="f-telegram" placeholder="https://t.me/reshot" autocomplete="off">
+        </label>
+        <label class="check span-2"><input type="checkbox" id="f-hit"> Показывать бейдж «Хит»</label>
+      </div>
+
+      <datalist id="hero-options"></datalist>
+      <p class="image-note" id="form-error" style="color:var(--accent-2)" hidden></p>
+    </div>
+
+    <div class="drawer__foot">
+      <button class="btn btn--danger btn--sm" type="button" id="f-delete" hidden>Удалить</button>
+      <div style="margin-left:auto;display:flex;gap:9px">
+        <button class="btn btn--ghost btn--sm" type="button" id="f-cancel">Отмена</button>
+        <button class="btn btn--primary btn--sm" type="submit" id="f-save">Сохранить</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- ---------- подтверждение ---------- -->
+
+<div class="confirm" id="confirm" hidden>
+  <div class="confirm__card" role="alertdialog" aria-modal="true" aria-labelledby="confirm-title">
+    <h3 id="confirm-title">Удалить предмет?</h3>
+    <p id="confirm-text"></p>
+    <div class="confirm__actions">
+      <button class="btn btn--ghost btn--sm" type="button" id="confirm-cancel">Отмена</button>
+      <button class="btn btn--primary btn--sm" type="button" id="confirm-ok">Подтвердить</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/seed.js" defer></script>
+<script src="assets/js/core.js" defer></script>
+<script src="assets/js/admin.js" defer></script>
+</body>
+</html>
