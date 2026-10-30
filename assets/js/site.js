@@ -293,7 +293,9 @@
           .sort((a, b) => {
             const soldA = a.item.status === 'sold' ? 1 : 0;
             const soldB = b.item.status === 'sold' ? 1 : 0;
-            return soldA - soldB || a.index - b.index;
+             const hitA = a.item.hit ? 0 : 1;
+             const hitB = b.item.hit ? 0 : 1;
+             return soldA - soldB || hitA - hitB || a.index - b.index;
           })
           .map((entry) => entry.item);
       }
