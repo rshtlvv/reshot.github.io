@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-29T23:06:25.114Z",
+  "updatedAt": "2026-10-30T00:35:43.502Z",
   "settings": {
     "name": "reshop",
     "tagline": "Магазин предметов Dota 2",
@@ -75,5 +75,22 @@
     "ctaTitle": "Готов сделать заказ?",
     "ctaText": "Напишите в Telegram. Если захотели что-то приобрести - сразу отвечу."
   },
-  "items": []
+  "items": [
+    {
+      "id": "8043ee-gravition-blackguard",
+      "name": "{##8043EE}Gravition Blackguard{/}",
+      "hero": "Enigma",
+      "slot": "Набор",
+      "rarity": "mythical",
+      "price": 120,
+      "oldPrice": 200,
+      "image": "assets/items/item-mvu8je6p.webp",
+      "status": "in_stock",
+      "hit": false,
+      "description": "Предмет {##8043EE}Gravition Blackguard{/} на Enigma из {##C837B5}Cosmic 2025 Heroes' Hoard{/}.",
+      "telegram": "https://t.me/r3sh0t",
+      "stock": 1,
+      "color": ""
+    }
+  ]
 }
