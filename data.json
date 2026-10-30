@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-30T03:32:26.651Z",
+  "updatedAt": "2026-10-30T11:36:43.032Z",
   "settings": {
     "name": "reshop",
     "tagline": "Магазин предметов Dota 2",
@@ -298,6 +298,22 @@
       "hit": false,
       "description": "Набор Taurid Twilight на Spirit Breaker из Cosmic 2025 Heroes' Hoard. Изменяет визуальные эффекты и модель.",
       "telegram": "https://t.me/r3sh0t",
+      "stock": 1,
+      "color": ""
+    },
+    {
+      "id": "leonid-luminosity",
+      "name": "Leonid Luminosity",
+      "hero": "Luna",
+      "slot": "Набор",
+      "rarity": "mythical",
+      "price": 750,
+      "oldPrice": 1000,
+      "image": "",
+      "status": "in_stock",
+      "hit": true,
+      "description": "",
+      "telegram": "",
       "stock": 1,
       "color": ""
     }
