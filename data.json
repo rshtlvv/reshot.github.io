@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-30T00:35:43.502Z",
+  "updatedAt": "2026-10-30T00:37:21.739Z",
   "settings": {
     "name": "reshop",
     "tagline": "Магазин предметов Dota 2",
@@ -78,7 +78,7 @@
   "items": [
     {
       "id": "8043ee-gravition-blackguard",
-      "name": "{##8043EE}Gravition Blackguard{/}",
+      "name": "Gravition Blackguard",
       "hero": "Enigma",
       "slot": "Набор",
       "rarity": "mythical",
@@ -87,7 +87,7 @@
       "image": "assets/items/item-mvu8je6p.webp",
       "status": "in_stock",
       "hit": false,
-      "description": "Предмет {##8043EE}Gravition Blackguard{/} на Enigma из {##C837B5}Cosmic 2025 Heroes' Hoard{/}.",
+      "description": "Предмет Gravition Blackguard на Enigma из Cosmic 2025 Heroes' Hoard. Изменяет визуальные эффекты, а в комплекте идут Эйдолоны.",
       "telegram": "https://t.me/r3sh0t",
       "stock": 1,
       "color": ""
