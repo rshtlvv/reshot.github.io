@@ -646,6 +646,13 @@ window.RS = (function () {
       el.href = tg;
       if (!el.dataset.keepLabel) el.setAttribute('aria-label', 'Написать в Telegram');
     });
+    const steamRaw = String(settings.steam || '').trim();
+    const steam = steamRaw
+      ? (/^https?:\/\//i.test(steamRaw) ? steamRaw : 'https://' + steamRaw)
+      : 'https://steamcommunity.com/';
+    document.querySelectorAll('[data-steam]').forEach((el) => {
+      el.href = steam;
+    });
     document.querySelectorAll('[data-site-name]').forEach((el) => {
       el.textContent = settings.name || 'reshop';
     });

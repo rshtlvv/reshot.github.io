@@ -796,29 +796,6 @@ input[type='search']::-webkit-search-decoration {
   }
 }
 
-/* ---------- переходы между страницами ---------- */
-
-@view-transition {
-  navigation: auto;
-}
-::view-transition-old(root) {
-  animation: vtOut 0.22s ease both;
-}
-::view-transition-new(root) {
-  animation: vtIn 0.32s ease both;
-}
-@keyframes vtOut {
-  to {
-    opacity: 0;
-  }
-}
-@keyframes vtIn {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-}
-
 /* ---------- адаптив ---------- */
 
 @media (max-width: 1080px) {

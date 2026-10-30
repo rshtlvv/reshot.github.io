@@ -697,6 +697,7 @@
       '<label class="label">Название<input class="input" id="s-name" value="' + RS.esc(settings.name) + '"></label>' +
       '<label class="label">Валюта<input class="input" id="s-currency" value="' + RS.esc(settings.currency) + '"></label>' +
       '<label class="label span-2">Telegram <span class="hint">ссылка или @ник</span><input class="input" id="s-telegram" value="' + RS.esc(settings.telegram) + '" placeholder="https://t.me/reshot"></label>' +
+      '<label class="label span-2">Ссылка Steam <span class="hint">кнопка Steam в футере — вставьте свою trade-ссылку</span><input class="input" id="s-steam" value="' + RS.esc(settings.steam) + '" placeholder="https://steamcommunity.com/tradeoffer/new/?partner=...&amp;token=..."></label>' +
       '<label class="label span-2">Подпись в футере<textarea class="input" id="s-footer" rows="2">' + RS.esc(settings.footerNote) + '</textarea></label>' +
       '</div></div>' +
 
@@ -808,6 +809,7 @@
       name: val('s-name') || 'reshop',
       currency: val('s-currency') || '₽',
       telegram: val('s-telegram'),
+      steam: val('s-steam'),
       footerNote: val('s-footer'),
       hero: Object.assign({}, prev.hero || {}, {
         eyebrow: val('h-eyebrow'),

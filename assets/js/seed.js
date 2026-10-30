@@ -1,76 +1,55 @@
 /* Сгенерировано из data.json — демо-данные и резервная копия. */
 window.RESHOP_SEED = {
   "version": 1,
-  "updatedAt": "2026-10-30T00:00:00.000Z",
+  "updatedAt": "2026-10-30T03:32:26.651Z",
   "settings": {
     "name": "reshop",
     "tagline": "Магазин предметов Dota 2",
-    "telegram": "https://t.me/reshot",
+    "telegram": "https://t.me/r3sh0t",
     "currency": "₽",
     "hero": {
       "eyebrow": "Dota 2 · магазин предметов",
-      "title": "Предметы, которые\n*решают* игру",
-      "text": "Арканы, имморталы и редкие сеты — без посредников. Проверяю каждый предмет вручную и передаю через Steam-трейд или подарком.",
-      "note": "2 400+ сделок · выдача 5–15 минут · гарантия",
-      "facts": [
-        {
-          "value": "2 400+",
-          "label": "сделок закрыто"
-        },
-        {
-          "value": "5–15 мин",
-          "label": "средняя выдача"
-        },
-        {
-          "value": "4.9 / 5",
-          "label": "рейтинг покупателей"
-        }
-      ]
+      "title": "Предметы, которые\n*украшают* игру",
+      "text": "Арканы, имморталки и недоступные сеты. Покупаю каждый предмет вручную, сам передаю через Steam-трейд или подарком.",
+      "note": "Быстрая выдача | Гарантия",
+      "facts": []
     },
     "catalog": {
       "eyebrow": "Каталог",
       "title": "В наличии",
       "note": "Все предметы проверены вручную и готовы к передаче."
     },
-    "footerNote": "reshop — независимый магазин предметов Dota 2. Не связан с Valve Corporation."
+    "footerNote": "reshop — независимый магазин предметов Dota 2. Не связан с Valve Corporation.",
+    "steam": "https://steamcommunity.com/tradeoffer/new/?partner=794480409&token=rdpYLs6f"
   },
   "about": {
     "eyebrow": "Обо мне",
     "title": "Привет, я *reshot*",
-    "lead": "Продаю предметы Dota 2 с 2019 года. Без накруток, ботов и «серых» схем — только честный обмен и живая связь.",
+    "lead": "Продаю предметы в Dota 2. Если приглянулось что-то - пишите в Telegram, я быстро отвечу.",
     "paragraphs": [
-      "Начал с пары аркан для друзей, а сегодня reshop — это небольшая мастерская, где каждый предмет проверен вручную. Я сам собираю инвентарь, сам общаюсь с покупателями и сам отвечаю, если что-то пошло не так.",
-      "Работаю по предоплате или через гаранта — как удобнее вам. Все предметы оригинальные, получены с официального рынка Steam или из сундуков. После сделки остаюсь на связи: помогу с выбором стиля и подскажу по комбинациям."
+      "Я сам покупаю предметы и сеты, сам общаюсь с покупателями и сам руковожу сайтом.\nРаботаю по предоплате или через гаранта — как удобнее вам. Все предметы куплены/получены в ходе трейдов лично мною. Инвентари я не продаю и в будущем не планирую."
     ],
     "name": "reshot",
-    "role": "Владелец reshop · в Dota 2 с 2014",
+    "role": "Начинающий селлер предметов в Доте.",
     "avatar": "",
     "stats": [
       {
-        "value": "2 400+",
-        "label": "сделок"
-      },
-      {
-        "value": "6 лет",
-        "label": "на рынке"
-      },
-      {
-        "value": "4.9",
-        "label": "средний рейтинг"
+        "value": "с 7:00 до 17:00",
+        "label": "режим работы по МСК"
       }
     ],
     "steps": [
       {
         "title": "Выбираете предмет",
-        "text": "В каталоге или напишите мне в Telegram — подскажу, что есть в наличии и чем отличаются стили."
+        "text": "В каталоге выбираете предмет, а потом пишите мне в Telegram - подскажу, что есть в наличии и помогу оформить заказ."
       },
       {
-        "title": "Согласуем детали",
-        "text": "Проверяем цену и способ передачи. Отвечаю в течение часа, обычно — гораздо быстрее."
+        "title": "Перед покупкой",
+        "text": "Проверяем цену и способ передачи. Отвечаю в течение часа, обычно - гораздо быстрее."
       },
       {
         "title": "Получаете предмет",
-        "text": "Передаю через Steam-трейд или подарком. Обычно это занимает 5–15 минут после оплаты."
+        "text": "Передаю через Steam-трейд или подарком. Обычно это занимает до 30 минут после оплаты."
       }
     ],
     "faq": [
@@ -83,16 +62,16 @@ window.RESHOP_SEED = {
         "a": "Переводом на карту или через СБП. Для крупных сделок — через гаранта, если так спокойнее."
       },
       {
-        "q": "Почему цены ниже Steam Market?",
-        "a": "Я работаю без комиссии торговой площадки и без посредников, поэтому могу держать цены ниже рынка."
-      },
-      {
-        "q": "Что если предмет не подошёл?",
-        "a": "Напишите в Telegram в течение суток. Если предмет ещё не передан — подберём замену или вернём деньги."
+        "q": "Как передаются сеты подарком?",
+        "a": "Из-за ограничений Steam недоступные предметы и сеты можно получить только подарком (и то не все). Необходимо добавить аккаунт в друзья, подождать ~30 дней для снятия ограничений, а уже затем передавать вещь в руки покупателя."
       },
       {
         "q": "Сколько ждать после оплаты?",
-        "a": "Обычно 5–15 минут. В пиковые часы — до часа, но я всегда предупреждаю заранее."
+        "a": "Отвечаю быстро, максимальное время ожидания - до 30 минут. В случаях задержки я предупреждаю заранее."
+      },
+      {
+        "q": "Какой режим работы?",
+        "a": "Заказы принимаю и выдаю с 7:00 до 17:00 по МСК. В некоторых случаях могу обработать и раньше."
       }
     ],
     "ctaTitle": "Готов сделать заказ?",
@@ -100,229 +79,228 @@ window.RESHOP_SEED = {
   },
   "items": [
     {
-      "id": "demon-eater",
-      "name": "Demon Eater",
-      "hero": "Shadow Fiend",
-      "slot": "Голова",
-      "rarity": "arcana",
-      "price": 2990,
-      "oldPrice": 3490,
-      "image": "assets/items/demon-eater.webp",
-      "status": "in_stock",
-      "hit": true,
-      "description": "Аркана Shadow Fiend с тремя стилями и кастомными эффектами способностей. Полный набор: модель героя, иконки и звуки.",
-      "telegram": "",
-      "stock": 3
-    },
-    {
-      "id": "magus-cypher",
-      "name": "The Magus Cypher",
-      "hero": "Rubick",
+      "id": "interstellar-astrarium",
+      "name": "Interstellar Astrarium",
+      "hero": "Tinker",
       "slot": "Набор",
-      "rarity": "arcana",
-      "price": 3290,
-      "oldPrice": 0,
-      "image": "assets/items/magus-cypher.webp",
-      "status": "in_stock",
-      "hit": false,
-      "description": "Аркана Rubick: новый облик, эффекты заклинаний и альтернативные иконки. Один из самых заметных сетов в игре.",
-      "telegram": "",
-      "stock": 2
-    },
-    {
-      "id": "voth-domosh",
-      "name": "Blades of Voth Domosh",
-      "hero": "Legion Commander",
-      "slot": "Оружие",
-      "rarity": "arcana",
-      "price": 3690,
-      "oldPrice": 4190,
-      "image": "assets/items/voth-domosh.webp",
+      "rarity": "immortal",
+      "price": 600,
+      "oldPrice": 700,
+      "image": "assets/items/interstellar-astrarium-mvuapdkb.webp",
       "status": "in_stock",
       "hit": true,
-      "description": "Аркана Legion Commander с двумя клинками, уникальными анимациями атаки и эффектами дуэли.",
-      "telegram": "",
-      "stock": 2
+      "description": "Набор Interstellar Astrarium на Tinker из Cosmic 2025 Heroes' Hoard. Изменяет визуальные эффекты, добавляет особые эффекты, изменяет звук и иконку.",
+      "telegram": "https://t.me/r3sh0t",
+      "stock": 1,
+      "color": ""
     },
     {
-      "id": "fractal-horns",
-      "name": "Fractal Horns of Inner Abysm",
-      "hero": "Terrorblade",
-      "slot": "Голова",
-      "rarity": "arcana",
-      "price": 3990,
-      "oldPrice": 0,
-      "image": "assets/items/fractal-horns.webp",
+      "id": "flame-of-origin",
+      "name": "Flame of Origin",
+      "hero": "Lina",
+      "slot": "Набор",
+      "rarity": "mythical",
+      "price": 600,
+      "oldPrice": 900,
+      "image": "assets/items/flame-of-origin-mvua6vlu.webp",
+      "status": "in_stock",
+      "hit": true,
+      "description": "Набор Flame of Origin на Lina из Cosmic 2025 Heroes' Hoard. Изменяет визуальные эффекты, в комплекте есть два стиля: более яркий и более тёмный.",
+      "telegram": "https://t.me/r3sh0t",
+      "stock": 1,
+      "color": ""
+    },
+    {
+      "id": "8043ee-gravition-blackguard",
+      "name": "Gravition Blackguard",
+      "hero": "Enigma",
+      "slot": "Набор",
+      "rarity": "mythical",
+      "price": 120,
+      "oldPrice": 200,
+      "image": "assets/items/item-mvu8je6p.webp",
       "status": "in_stock",
       "hit": false,
-      "description": "Аркана Terrorblade: рога, крылья и переработанные эффекты метаморфозы.",
-      "telegram": "",
-      "stock": 1
+      "description": "Набор Gravition Blackguard на Enigma из Cosmic 2025 Heroes' Hoard. Изменяет визуальные эффекты, а в комплекте идут Эйдолоны.",
+      "telegram": "https://t.me/r3sh0t",
+      "stock": 2,
+      "color": ""
     },
     {
-      "id": "feast-abscession",
-      "name": "Feast of Abscession",
-      "hero": "Pudge",
-      "slot": "Оружие",
-      "rarity": "arcana",
-      "price": 2590,
-      "oldPrice": 0,
-      "image": "assets/items/feast-abscession.webp",
+      "id": "frozen-nova",
+      "name": "Frozen Nova",
+      "hero": "Ancient Apparition",
+      "slot": "Набор",
+      "rarity": "mythical",
+      "price": 100,
+      "oldPrice": 110,
+      "image": "assets/items/frozen-nova-mvu91yr8.webp",
       "status": "in_stock",
       "hit": false,
-      "description": "Аркана Pudge: крюк, разделочный стол и мрачные эффекты мясника.",
-      "telegram": "",
-      "stock": 4
+      "description": "Набор Frozen Nova на Ancient Apparition из Cosmic 2025 Heroes' Hoard.",
+      "telegram": "https://t.me/r3sh0t",
+      "stock": 2,
+      "color": ""
     },
     {
-      "id": "frost-avalanche",
-      "name": "Frost Avalanche",
+      "id": "photonic-father",
+      "name": "Photonic Father",
+      "hero": "Zeus",
+      "slot": "Набор",
+      "rarity": "mythical",
+      "price": 190,
+      "oldPrice": 220,
+      "image": "assets/items/photonic-father-mvu97ahu.webp",
+      "status": "in_stock",
+      "hit": false,
+      "description": "Набор Photonic Father на Zeus из Cosmic 2025 Heroes' Hoard. Изменяет визуальные эффекты.",
+      "telegram": "",
+      "stock": 2,
+      "color": ""
+    },
+    {
+      "id": "chrononaut-continuum",
+      "name": "Chrononaut Continuum",
+      "hero": "Faceless Void",
+      "slot": "Набор",
+      "rarity": "mythical",
+      "price": 420,
+      "oldPrice": 500,
+      "image": "assets/items/chrononaut-continuum-mvu9ckjj.webp",
+      "status": "in_stock",
+      "hit": false,
+      "description": "Набор Chrononaut Continuum на Faceless Void из Cosmic 2025 Heroes' Hoard.",
+      "telegram": "https://t.me/r3sh0t",
+      "stock": 1,
+      "color": ""
+    },
+    {
+      "id": "reaper-of-the-waning-veil",
+      "name": "Reaper of the Waning Veil",
+      "hero": "Phantom Assasin",
+      "slot": "Набор",
+      "rarity": "mythical",
+      "price": 300,
+      "oldPrice": 400,
+      "image": "assets/items/item-mvu9e827.webp",
+      "status": "in_stock",
+      "hit": false,
+      "description": "Набор Reaper of the Waning Veil на Phantom Assasin из Cosmic 2025 Heroes' Hoard. Изменяет визуальные эффекты и звук, а в комплекте с сетом идет личность Exile Unveiled.",
+      "telegram": "https://t.me/r3sh0t",
+      "stock": 2,
+      "color": ""
+    },
+    {
+      "id": "astral-schism",
+      "name": "Astral Schism",
+      "hero": "Sven",
+      "slot": "Набор",
+      "rarity": "mythical",
+      "price": 310,
+      "oldPrice": 350,
+      "image": "assets/items/astral-schism-mvu9ocxu.webp",
+      "status": "in_stock",
+      "hit": false,
+      "description": "Набор Astral Schism на Sven из Cosmic 2025 Heroes' Hoard. Изменяет визуальные эффекты.",
+      "telegram": "https://t.me/r3sh0t",
+      "stock": 2,
+      "color": ""
+    },
+    {
+      "id": "star-sage",
+      "name": "Star Sage",
+      "hero": "Phoenix",
+      "slot": "Набор",
+      "rarity": "mythical",
+      "price": 190,
+      "oldPrice": 300,
+      "image": "assets/items/star-sage-mvu9swrl.webp",
+      "status": "in_stock",
+      "hit": false,
+      "description": "Набор Star Sage на Phoenix из Cosmic 2025 Heroes' Hoard. В комплекте идет Яйцо в виде совы, которое изменяет иконку Supernova.",
+      "telegram": "",
+      "stock": 2,
+      "color": ""
+    },
+    {
+      "id": "umbral-expanse",
+      "name": "Umbral Expanse",
+      "hero": "Void Spirit",
+      "slot": "Набор",
+      "rarity": "mythical",
+      "price": 210,
+      "oldPrice": 250,
+      "image": "assets/items/umbral-expanse-mvu9w73d.webp",
+      "status": "in_stock",
+      "hit": false,
+      "description": "Набор Umbral Expanse на Void Spirit из Cosmic 2025 Heroes' Hoard. Изменяет визуальные эффекты.",
+      "telegram": "https://t.me/r3sh0t",
+      "stock": 1,
+      "color": ""
+    },
+    {
+      "id": "cosmic-cartographer",
+      "name": "Cosmic Cartographer",
+      "hero": "Marci",
+      "slot": "Набор",
+      "rarity": "mythical",
+      "price": 220,
+      "oldPrice": 300,
+      "image": "assets/items/item-mvu9z3e5.webp",
+      "status": "in_stock",
+      "hit": false,
+      "description": "Набор Cosmic Cartographer на Marci из Cosmic 2025 Heroes' Hoard.",
+      "telegram": "https://t.me/r3sh0t",
+      "stock": 1,
+      "color": ""
+    },
+    {
+      "id": "narwolf-nebula",
+      "name": "Narwolf Nebula",
       "hero": "Crystal Maiden",
       "slot": "Набор",
-      "rarity": "arcana",
-      "price": 2190,
-      "oldPrice": 2590,
-      "image": "assets/items/frost-avalanche.webp",
-      "status": "in_stock",
-      "hit": true,
-      "description": "Аркана Crystal Maiden: ледяная шаль, волчонок и зимние эффекты способностей.",
-      "telegram": "",
-      "stock": 3
-    },
-    {
-      "id": "bladeform-legacy",
-      "name": "Bladeform Legacy",
-      "hero": "Juggernaut",
-      "slot": "Голова",
-      "rarity": "arcana",
-      "price": 2890,
-      "oldPrice": 0,
-      "image": "assets/items/bladeform-legacy.webp",
+      "rarity": "mythical",
+      "price": 240,
+      "oldPrice": 300,
+      "image": "assets/items/narwolf-nebula-mvucbab7.webp",
       "status": "in_stock",
       "hit": false,
-      "description": "Аркана Juggernaut: маска, клинок и кастомные эффекты Omnislash.",
-      "telegram": "",
-      "stock": 2
+      "description": "Набор Narwolf Nebula на Crystal Maiden из Cosmic 2025 Heroes' Hoard. Изменяет визуальные эффекты, а в наборе идет личность Conduit of the Blueheart.",
+      "telegram": "https://t.me/r3sh0t",
+      "stock": 1,
+      "color": ""
     },
     {
-      "id": "great-sage",
-      "name": "Great Sage's Reckoning",
-      "hero": "Monkey King",
+      "id": "pisces-gemini",
+      "name": "Pisces Gemini",
+      "hero": "Ogre Magi",
       "slot": "Набор",
-      "rarity": "arcana",
-      "price": 2790,
-      "oldPrice": 0,
-      "image": "assets/items/great-sage.webp",
+      "rarity": "mythical",
+      "price": 600,
+      "oldPrice": 700,
+      "image": "assets/items/pisces-gemini-mvuahq29.webp",
       "status": "in_stock",
       "hit": false,
-      "description": "Аркана Monkey King: посох, трансформация и полный набор эффектов.",
-      "telegram": "",
-      "stock": 1
+      "description": "Набор Pisces Gemini на Ogre Magi из Cosmic 2025 Heroes' Hoard. Изменяет визуальные эффекты, Arcana-предмет, анимацию и модель.",
+      "telegram": "https://t.me/r3sh0t",
+      "stock": 1,
+      "color": ""
     },
     {
-      "id": "manifold-paradox",
-      "name": "Manifold Paradox",
-      "hero": "Phantom Assassin",
-      "slot": "Оружие",
-      "rarity": "arcana",
-      "price": 2690,
-      "oldPrice": 3190,
-      "image": "assets/items/manifold-paradox.webp",
+      "id": "taurid-twilight",
+      "name": "Taurid Twilight",
+      "hero": "Spirit Breaker",
+      "slot": "Набор",
+      "rarity": "mythical",
+      "price": 240,
+      "oldPrice": 250,
+      "image": "assets/items/taurid-twilight-mvuamppr.webp",
       "status": "in_stock",
       "hit": false,
-      "description": "Аркана Phantom Assassin с двумя стилями клинков и уникальными эффектами.",
-      "telegram": "",
-      "stock": 2
-    },
-    {
-      "id": "tempest-helm",
-      "name": "Tempest Helm of the Thundergod",
-      "hero": "Zeus",
-      "slot": "Голова",
-      "rarity": "arcana",
-      "price": 2790,
-      "oldPrice": 0,
-      "image": "assets/items/tempest-helm.webp",
-      "status": "in_stock",
-      "hit": false,
-      "description": "Аркана Zeus: шлем, молнии и переработанные эффекты способностей.",
-      "telegram": "",
-      "stock": 1
-    },
-    {
-      "id": "peregrine",
-      "name": "Peregrine Flight",
-      "hero": "Windranger",
-      "slot": "Оружие",
-      "rarity": "immortal",
-      "price": 690,
-      "oldPrice": 0,
-      "image": "assets/items/peregrine.webp",
-      "status": "in_stock",
-      "hit": false,
-      "description": "Иммортал для Windranger: лук с эффектами Powershot и новыми звуками.",
-      "telegram": "",
-      "stock": 6
-    },
-    {
-      "id": "concord-dominion",
-      "name": "Concord Dominion",
-      "hero": "Phantom Lancer",
-      "slot": "Плечи",
-      "rarity": "immortal",
-      "price": 1190,
-      "oldPrice": 0,
-      "image": "assets/items/concord-dominion.webp",
-      "status": "reserved",
-      "hit": false,
-      "description": "Иммортал для Phantom Lancer: наплечники с эффектами Phantom Rush.",
-      "telegram": "",
-      "stock": 1
-    },
-    {
-      "id": "phantom-concord",
-      "name": "Phantom Concord",
-      "hero": "Phantom Lancer",
-      "slot": "Оружие",
-      "rarity": "immortal",
-      "price": 590,
-      "oldPrice": 0,
-      "image": "assets/items/phantom-concord.webp",
-      "status": "in_stock",
-      "hit": false,
-      "description": "Иммортал для Phantom Lancer: копьё с эффектами Spirit Lance.",
-      "telegram": "",
-      "stock": 4
-    },
-    {
-      "id": "transversant-soul",
-      "name": "Transversant Soul",
-      "hero": "Spectre",
-      "slot": "Плечи",
-      "rarity": "immortal",
-      "price": 890,
-      "oldPrice": 0,
-      "image": "assets/items/transversant-soul.webp",
-      "status": "in_stock",
-      "hit": false,
-      "description": "Иммортал для Spectre: наплечники с эффектами Spectral Dagger.",
-      "telegram": "",
-      "stock": 2
-    },
-    {
-      "id": "abscesserator",
-      "name": "The Abscesserator",
-      "hero": "Pudge",
-      "slot": "Оружие",
-      "rarity": "immortal",
-      "price": 1090,
-      "oldPrice": 0,
-      "image": "assets/items/abscesserator.webp",
-      "status": "sold",
-      "hit": false,
-      "description": "Иммортал для Pudge: крюк с кровавыми эффектами и звуками.",
-      "telegram": "",
-      "stock": 0
+      "description": "Набор Taurid Twilight на Spirit Breaker из Cosmic 2025 Heroes' Hoard. Изменяет визуальные эффекты и модель.",
+      "telegram": "https://t.me/r3sh0t",
+      "stock": 1,
+      "color": ""
     }
   ]
 };

@@ -293,9 +293,9 @@
           .sort((a, b) => {
             const soldA = a.item.status === 'sold' ? 1 : 0;
             const soldB = b.item.status === 'sold' ? 1 : 0;
-             const hitA = a.item.hit ? 0 : 1;
-             const hitB = b.item.hit ? 0 : 1;
-             return soldA - soldB || hitA - hitB || a.index - b.index;
+            const hitA = a.item.hit ? 0 : 1;
+            const hitB = b.item.hit ? 0 : 1;
+            return soldA - soldB || hitA - hitB || a.index - b.index;
           })
           .map((entry) => entry.item);
       }
@@ -617,10 +617,12 @@
       }
       if (page === 'about') initAbout(store);
       RS.initChrome();
+      document.documentElement.classList.remove('is-booting');
     })
     .catch((error) => {
       console.error(error);
       RS.initChrome();
+      document.documentElement.classList.remove('is-booting');
     });
 
   function initHome(store) {
@@ -637,12 +639,14 @@
     if (note) note.innerHTML = hero.note ? ICON_CHECK + '<span>' + RS.esc(hero.note) + '</span>' : '';
     const facts = $('[data-hero-facts]');
     if (facts) {
-      facts.innerHTML = (hero.facts || [])
+      const list = hero.facts || [];
+      facts.innerHTML = list
         .map(
           (fact) =>
             '<div class="fact"><span class="fact__value">' + RS.esc(fact.value) + '</span><span class="fact__label">' + RS.esc(fact.label) + '</span></div>'
         )
         .join('');
+      facts.hidden = list.length === 0;
     }
     const footerNote = document.querySelector('[data-footer-note]');
     if (footerNote && settings.footerNote) footerNote.textContent = settings.footerNote;

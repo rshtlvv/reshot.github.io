@@ -6,6 +6,14 @@
   display: none !important;
 }
 
+/* Пока данные не подставлены, не показываем статический демо-шаблон */
+html.is-booting main {
+  opacity: 0;
+}
+main {
+  transition: opacity 0.28s var(--ease);
+}
+
 /* ---------- hero ---------- */
 
 .hero {
@@ -1244,7 +1252,7 @@
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin-top: 72px;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);

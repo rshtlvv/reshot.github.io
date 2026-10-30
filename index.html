@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="is-booting">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,10 +11,12 @@
   <meta property="og:description" content="Арканы, имморталы и редкие сеты без посредников. Выдача 5–15 минут, связь в Telegram.">
   <meta property="og:image" content="assets/items/demon-eater.webp">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <style>html.is-booting main{opacity:0}</style>
   <link rel="preload" href="assets/fonts/unbounded-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/site.css">
+  <noscript><style>html.is-booting main{opacity:1!important}</style></noscript>
 </head>
 <body data-page="home">
 
@@ -43,13 +45,10 @@
     </nav>
 
     <div class="header__actions">
-      <a class="draft-chip" data-draft-chip href="admin.html" hidden><span>Черновик</span></a>
-      <a class="btn btn--ghost btn--sm header__tg" data-telegram href="https://t.me/reshot" target="_blank" rel="noopener">
+      <span class="draft-chip" data-draft-chip hidden><span>Черновик</span></span>
+      <a class="btn btn--ghost btn--sm header__tg" data-telegram href="https://t.me/r3sh0t" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.04 15.47l-.38 5.34c.54 0 .78-.23 1.06-.5l2.55-2.44 5.29 3.87c.97.53 1.66.25 1.92-.9L22.9 3.9c.31-1.42-.51-1.98-1.45-1.63L2.5 9.45c-1.39.54-1.37 1.31-.24 1.66l4.83 1.51L18.3 5.5c.52-.35 1-.16.61.19l-8.87 8.01z"></path></svg>
         <span>Telegram</span>
-      </a>
-      <a class="icon-btn" href="admin.html" aria-label="Админ-панель" title="Админ-панель">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.6"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
       </a>
       <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu">
         <span></span><span></span><span></span>
@@ -62,10 +61,9 @@
   <nav class="menu__list" aria-label="Мобильная навигация">
     <div class="menu__item" style="--i:0"><a class="menu__link" href="index.html"><span>01</span>Каталог</a></div>
     <div class="menu__item" style="--i:1"><a class="menu__link" href="about.html"><span>02</span>Обо мне</a></div>
-    <div class="menu__item" style="--i:2"><a class="menu__link" href="admin.html"><span>03</span>Админка</a></div>
   </nav>
   <div class="menu__foot">
-    <a class="btn btn--primary" data-telegram href="https://t.me/reshot" target="_blank" rel="noopener">
+    <a class="btn btn--primary" data-telegram href="https://t.me/r3sh0t" target="_blank" rel="noopener">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.04 15.47l-.38 5.34c.54 0 .78-.23 1.06-.5l2.55-2.44 5.29 3.87c.97.53 1.66.25 1.92-.9L22.9 3.9c.31-1.42-.51-1.98-1.45-1.63L2.5 9.45c-1.39.54-1.37 1.31-.24 1.66l4.83 1.51L18.3 5.5c.52-.35 1-.16.61.19l-8.87 8.01z"></path></svg>
       Написать в Telegram
     </a>
@@ -85,7 +83,7 @@
             Смотреть каталог
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"></path></svg>
           </a>
-          <a class="btn btn--ghost" data-telegram href="https://t.me/reshot" target="_blank" rel="noopener">
+          <a class="btn btn--ghost" data-telegram href="https://t.me/r3sh0t" target="_blank" rel="noopener">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.04 15.47l-.38 5.34c.54 0 .78-.23 1.06-.5l2.55-2.44 5.29 3.87c.97.53 1.66.25 1.92-.9L22.9 3.9c.31-1.42-.51-1.98-1.45-1.63L2.5 9.45c-1.39.54-1.37 1.31-.24 1.66l4.83 1.51L18.3 5.5c.52-.35 1-.16.61.19l-8.87 8.01z"></path></svg>
             Написать в Telegram
           </a>
@@ -144,7 +142,7 @@
         </div>
         <div class="section-head__aside">
           <span class="count-pill"><b id="count">15</b> <span id="count-label">предметов</span></span>
-          <a class="btn btn--ghost btn--sm" data-telegram href="https://t.me/reshot" target="_blank" rel="noopener">Подбор в Telegram</a>
+          <a class="btn btn--ghost btn--sm" data-telegram href="https://t.me/r3sh0t" target="_blank" rel="noopener">Подбор в Telegram</a>
         </div>
       </div>
 
@@ -247,14 +245,13 @@
         <ul>
           <li><a href="index.html">Каталог</a></li>
           <li><a href="about.html">Обо мне</a></li>
-          <li><a href="admin.html">Админ-панель</a></li>
         </ul>
       </div>
       <div class="footer__col">
         <h4>Связь</h4>
         <ul>
-          <li><a data-telegram href="https://t.me/reshot" target="_blank" rel="noopener">Telegram</a></li>
-          <li><a href="https://steamcommunity.com/" target="_blank" rel="noopener">Steam</a></li>
+          <li><a data-telegram href="https://t.me/r3sh0t" target="_blank" rel="noopener">Telegram</a></li>
+          <li><a data-steam href="https://steamcommunity.com/tradeoffer/new/?partner=794480409&amp;token=rdpYLs6f" target="_blank" rel="noopener">Steam</a></li>
         </ul>
       </div>
     </div>
