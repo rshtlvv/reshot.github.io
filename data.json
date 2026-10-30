@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-30T01:00:27.789Z",
+  "updatedAt": "2026-10-30T01:01:47.105Z",
   "settings": {
     "name": "reshop",
     "tagline": "Магазин предметов Dota 2",
@@ -164,7 +164,7 @@
       "rarity": "mythical",
       "price": 310,
       "oldPrice": 350,
-      "image": "assets/items/astral-schism-mvu9m9yh.webp",
+      "image": "assets/items/astral-schism-mvu9ocxu.webp",
       "status": "in_stock",
       "hit": false,
       "description": "Предмет Astral Schism на Sven из Cosmic 2025 Heroes' Hoard. Изменяет визуальные эффекты.",
