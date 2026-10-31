@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-30T12:14:38.461Z",
+  "updatedAt": "2026-10-31T11:56:41.665Z",
   "settings": {
     "name": "reshop",
     "tagline": "Магазин предметов Dota 2",
@@ -126,6 +126,22 @@
       "color": ""
     },
     {
+      "id": "photax-fluttercat",
+      "name": "Photax Fluttercat",
+      "hero": "Mirana",
+      "slot": "Набор",
+      "rarity": "immortal",
+      "price": 270,
+      "oldPrice": 290,
+      "image": "assets/items/photax-fluttercat-mvuwh9nu.webp",
+      "status": "in_stock",
+      "hit": false,
+      "description": "Набор Photax Fluttercat на Mirana из Cosmic 2025 Heroes' Hoard. Изменяет визуальные эффекты, добавляет особые эффекты, изменяет иконку и эффекты Sacred Arrow.",
+      "telegram": "",
+      "stock": 1,
+      "color": ""
+    },
+    {
       "id": "8043ee-gravition-blackguard",
       "name": "Gravition Blackguard",
       "hero": "Enigma",
@@ -186,7 +202,7 @@
       "hit": false,
       "description": "Набор Chrononaut Continuum на Faceless Void из Cosmic 2025 Heroes' Hoard.",
       "telegram": "https://t.me/r3sh0t",
-      "stock": 1,
+      "stock": 2,
       "color": ""
     },
     {
@@ -222,22 +238,6 @@
       "color": ""
     },
     {
-      "id": "photax-fluttercat",
-      "name": "Photax Fluttercat",
-      "hero": "Mirana",
-      "slot": "Набор",
-      "rarity": "immortal",
-      "price": 270,
-      "oldPrice": 290,
-      "image": "assets/items/photax-fluttercat-mvuwh9nu.webp",
-      "status": "in_stock",
-      "hit": false,
-      "description": "Набор Photax Fluttercat на Mirana из Cosmic 2025 Heroes' Hoard. Изменяет визуальные эффекты, добавляет особые эффекты, изменяет иконку и эффекты Sacred Arrow.",
-      "telegram": "",
-      "stock": 1,
-      "color": ""
-    },
-    {
       "id": "star-sage",
       "name": "Star Sage",
       "hero": "Phoenix",
@@ -266,7 +266,7 @@
       "hit": false,
       "description": "Набор Umbral Expanse на Void Spirit из Cosmic 2025 Heroes' Hoard. Изменяет визуальные эффекты.",
       "telegram": "https://t.me/r3sh0t",
-      "stock": 1,
+      "stock": 2,
       "color": ""
     },
     {
