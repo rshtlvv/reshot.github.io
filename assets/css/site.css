@@ -528,8 +528,8 @@ main {
   flex: 1;
   min-width: 0;
   align-items: baseline;
-  gap: 4px;
-  font-size: 14px;
+  gap: 5px;
+  font-size: 21px;
   font-variant-numeric: tabular-nums;
   font-weight: 600;
   color: var(--text);
@@ -537,7 +537,7 @@ main {
 }
 .price i {
   font-style: normal;
-  font-size: 10.5px;
+  font-size: 15px;
   font-weight: 400;
   color: var(--mute);
 }
@@ -790,11 +790,11 @@ main {
     padding-top: 7px;
   }
   .price {
-    gap: 3px;
-    font-size: 12.5px;
+    gap: 4px;
+    font-size: 18.5px;
   }
   .price i {
-    font-size: 9.5px;
+    font-size: 14px;
   }
   .card__rarity {
     top: 6px;
@@ -840,7 +840,10 @@ main {
     gap: 4px;
   }
   .price {
-    font-size: 12px;
+    font-size: 18px;
+  }
+  .price i {
+    font-size: 13.5px;
   }
 }
 
