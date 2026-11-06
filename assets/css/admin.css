@@ -1008,7 +1008,7 @@ textarea.input::placeholder {
   display: flex;
   justify-content: flex-end;
   gap: 6px;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.25s;
 }
 .drop:hover .drop__overlay,
@@ -1036,6 +1036,16 @@ textarea.input::placeholder {
 .image-note {
   font-size: 10.5px;
   color: var(--mute);
+}
+.image-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+.image-actions .image-note {
+  font-size: 10px;
 }
 .image-note.is-error {
   color: var(--accent-2);

@@ -131,6 +131,8 @@
     }
     const pick = $('#f-pick');
     if (pick) pick.addEventListener('click', () => file && file.click());
+    const upload = $('#f-upload');
+    if (upload) upload.addEventListener('click', () => file && file.click());
     const drop = $('#drop');
     if (drop) {
       drop.addEventListener('click', (event) => {
@@ -387,6 +389,8 @@
       }
     }
     if (empty) empty.hidden = Boolean(imageValue);
+    const pick = $('#f-pick');
+    if (pick) pick.textContent = imageValue ? 'заменить' : 'загрузить';
     if (input && !fromInput) input.value = isData ? '' : imageValue;
   }
 
