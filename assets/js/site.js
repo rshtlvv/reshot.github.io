@@ -8,6 +8,14 @@
   const RS = window.RS;
   const $ = (selector, root) => (root || document).querySelector(selector);
 
+  function hexToRgba(hex, alpha) {
+    const clean = String(hex || '').replace('#', '');
+    const full = clean.length === 3 ? clean.split('').map((char) => char + char).join('') : clean.slice(0, 6);
+    const value = parseInt(full, 16);
+    if (Number.isNaN(value)) return 'rgba(136, 71, 255, ' + alpha + ')';
+    return 'rgba(' + ((value >> 16) & 255) + ', ' + ((value >> 8) & 255) + ', ' + (value & 255) + ', ' + alpha + ')';
+  }
+
   function pluralRu(n, forms) {
     const n10 = n % 10;
     const n100 = n % 100;
@@ -94,6 +102,10 @@
       const telegram = RS.telegramFor(item);
       const trade = item.trade || settings.steam || '';
       const stock = item.stock > 1 ? item.stock + ' шт.' : '';
+      const rarity = RS.RARITIES[item.rarity] || RS.RARITIES.rare;
+      const accent = RS.accentFor(item) || rarity.color;
+      const accentSoft = hexToRgba(accent, 0.18);
+      const accentGlow = hexToRgba(accent, 0.32);
       const currency = (settings.currency || '₽');
       const meta = [];
       if (item.hero) meta.push('<span>' + RS.esc(item.hero) + '</span>');
@@ -106,13 +118,14 @@
         links.push('<a href="' + RS.esc(telegram) + '" target="_blank" rel="noopener">телеграм</a>');
       }
       return (
-        '<article class="card' + (sold ? ' is-sold' : '') + '" data-id="' + RS.esc(item.id) + '">' +
+        '<article class="card' + (sold ? ' is-sold' : '') + '" data-id="' + RS.esc(item.id) + '" style="--rarity:' + accent + ';--rarity-soft:' + accentSoft + ';--rarity-glow:' + accentGlow + '">' +
         '<div class="card__media">' +
         '<img src="' + RS.esc(item.image || RS.PLACEHOLDER) + '" alt="' + RS.esc(name) + '" loading="' + (index < 4 ? 'eager' : 'lazy') + '" width="600" height="400" data-guard>' +
+        '<span class="card__rarity"><i></i>' + RS.esc(rarity.label) + '</span>' +
         (sold ? '<div class="card__sold"><span>продано</span></div>' : '') +
         '</div>' +
         '<div class="card__body">' +
-        '<h3 class="card__title">' + RS.esc(name) + '</h3>' +
+        '<h3 class="card__title" style="color:var(--rarity)">' + RS.esc(name) + '</h3>' +
         '<div class="card__meta">' +
         meta.join('<span class="dot"></span>') +
         '</div>' +

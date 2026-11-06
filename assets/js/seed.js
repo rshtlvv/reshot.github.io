@@ -28,7 +28,9 @@ window.RESHOP_SEED = {
       "stock": 1,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "immortal",
+      "color": ""
     },
     {
       "id": "leonid-luminosity",
@@ -42,7 +44,9 @@ window.RESHOP_SEED = {
       "stock": 1,
       "telegram": "",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "flame-of-origin",
@@ -56,7 +60,9 @@ window.RESHOP_SEED = {
       "stock": 2,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "photax-fluttercat",
@@ -70,7 +76,9 @@ window.RESHOP_SEED = {
       "stock": 1,
       "telegram": "",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "immortal",
+      "color": ""
     },
     {
       "id": "8043ee-gravition-blackguard",
@@ -84,7 +92,9 @@ window.RESHOP_SEED = {
       "stock": 2,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "frozen-nova",
@@ -98,7 +108,9 @@ window.RESHOP_SEED = {
       "stock": 2,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "photonic-father",
@@ -112,7 +124,9 @@ window.RESHOP_SEED = {
       "stock": 2,
       "telegram": "",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "chrononaut-continuum",
@@ -126,7 +140,9 @@ window.RESHOP_SEED = {
       "stock": 2,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "reaper-of-the-waning-veil",
@@ -140,7 +156,9 @@ window.RESHOP_SEED = {
       "stock": 2,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "astral-schism",
@@ -154,7 +172,9 @@ window.RESHOP_SEED = {
       "stock": 2,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "star-sage",
@@ -168,7 +188,9 @@ window.RESHOP_SEED = {
       "stock": 2,
       "telegram": "",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "umbral-expanse",
@@ -182,7 +204,9 @@ window.RESHOP_SEED = {
       "stock": 2,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "cosmic-cartographer",
@@ -196,7 +220,9 @@ window.RESHOP_SEED = {
       "stock": 1,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "narwolf-nebula",
@@ -210,7 +236,9 @@ window.RESHOP_SEED = {
       "stock": 1,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "pisces-gemini",
@@ -224,7 +252,9 @@ window.RESHOP_SEED = {
       "stock": 1,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "taurid-twilight",
@@ -238,7 +268,9 @@ window.RESHOP_SEED = {
       "stock": 1,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     }
   ]
 };

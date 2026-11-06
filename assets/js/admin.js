@@ -255,11 +255,12 @@
         const status = RS.STATUS[item.status] || RS.STATUS.in_stock;
         const tone = status.tone === 'ok' ? ' is-ok' : status.tone === 'warn' ? ' is-warn' : '';
         const stock = item.stock > 0 ? item.stock + ' шт.' : 'нет';
+        const rarity = RS.RARITIES[item.rarity] || RS.RARITIES.rare;
         const actions = ACTION_LABELS[item.actions] || ACTION_LABELS.telegram;
         return (
           '<div class="item-row' + (item.status === 'sold' ? ' is-sold' : '') + '" data-row-id="' + RS.esc(item.id) + '">' +
           '<div class="item-row__thumb"><img src="' + RS.esc(item.image || RS.PLACEHOLDER) + '" alt="" loading="lazy" data-guard></div>' +
-          '<div class="item-row__name"><b>' + RS.esc(RS.plainText(item.name)) + '</b><span>' + RS.esc(item.hero || '—') + ' · ' + RS.esc(item.slot || '—') + ' · ' + RS.esc(stock) + '</span></div>' +
+          '<div class="item-row__name"><b>' + RS.esc(RS.plainText(item.name)) + '</b><span>' + RS.esc(item.hero || '—') + ' · ' + RS.esc(item.slot || '—') + ' · ' + RS.esc(stock) + ' · <em style="font-style:normal;color:' + rarity.color + '">' + RS.esc(rarity.label) + '</em></span></div>' +
           '<div class="item-row__price">' + RS.money(item.price) + ' ' + RS.esc(currency) + '</div>' +
           '<div class="item-row__actions-label">' + RS.esc(actions) + '</div>' +
           '<div class="item-row__status' + tone + '">' + RS.esc(status.label) + '</div>' +
@@ -299,6 +300,12 @@
         '<option value="trade">только трейд</option>' +
         '<option value="both">трейд + Telegram</option>';
     }
+    const rarity = $('#f-rarity');
+    if (rarity) {
+      rarity.innerHTML = RS.RARITY_ORDER
+        .map((key) => '<option value="' + key + '">' + RS.RARITIES[key].label + '</option>')
+        .join('');
+    }
     const names = Array.from(new Set(store.data.items.map((item) => item.hero).filter(Boolean))).sort();
     const datalist = $('#hero-options');
     if (datalist) datalist.innerHTML = names.map((name) => '<option value="' + RS.esc(name) + '"></option>').join('');
@@ -321,6 +328,7 @@
     $('#f-hero').value = item ? item.hero : '';
     $('#f-slot').value = item ? item.slot : '';
     $('#f-status').value = item ? item.status : 'in_stock';
+    $('#f-rarity').value = item ? item.rarity || 'rare' : 'rare';
     $('#f-actions').value = item ? item.actions || 'telegram' : 'telegram';
     $('#f-price').value = item ? item.price : '';
     $('#f-stock').value = item ? item.stock : 1;
@@ -433,6 +441,7 @@
       price: Math.max(0, Number($('#f-price').value) || 0),
       image: imageValue || $('#f-image').value.trim(),
       status: $('#f-status').value,
+      rarity: $('#f-rarity').value || 'rare',
       stock: Math.max(0, Math.floor(Number($('#f-stock').value) || 0)),
       actions,
       trade: ownTrade,

@@ -27,7 +27,9 @@
       "stock": 1,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "immortal",
+      "color": ""
     },
     {
       "id": "leonid-luminosity",
@@ -41,7 +43,9 @@
       "stock": 1,
       "telegram": "",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "flame-of-origin",
@@ -55,7 +59,9 @@
       "stock": 2,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "photax-fluttercat",
@@ -69,7 +75,9 @@
       "stock": 1,
       "telegram": "",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "immortal",
+      "color": ""
     },
     {
       "id": "8043ee-gravition-blackguard",
@@ -83,7 +91,9 @@
       "stock": 2,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "frozen-nova",
@@ -97,7 +107,9 @@
       "stock": 2,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "photonic-father",
@@ -111,7 +123,9 @@
       "stock": 2,
       "telegram": "",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "chrononaut-continuum",
@@ -125,7 +139,9 @@
       "stock": 2,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "reaper-of-the-waning-veil",
@@ -139,7 +155,9 @@
       "stock": 2,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "astral-schism",
@@ -153,7 +171,9 @@
       "stock": 2,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "star-sage",
@@ -167,7 +187,9 @@
       "stock": 2,
       "telegram": "",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "umbral-expanse",
@@ -181,7 +203,9 @@
       "stock": 2,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "cosmic-cartographer",
@@ -195,7 +219,9 @@
       "stock": 1,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "narwolf-nebula",
@@ -209,7 +235,9 @@
       "stock": 1,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "pisces-gemini",
@@ -223,7 +251,9 @@
       "stock": 1,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     },
     {
       "id": "taurid-twilight",
@@ -237,7 +267,9 @@
       "stock": 1,
       "telegram": "https://t.me/r3sh0t",
       "actions": "telegram",
-      "trade": ""
+      "trade": "",
+      "rarity": "mythical",
+      "color": ""
     }
   ]
 }
