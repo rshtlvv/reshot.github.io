@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-06T23:21:30.480Z",
+  "updatedAt": "2026-11-06T23:24:21.648Z",
   "settings": {
     "name": "reshop",
     "currency": "₽",
     "intro": {
-      "title": "Привет. Это *reshop*.",
-      "text": "Мой инвентарь Dota 2. Забирайте трейдом или пишите в телеграм — отвечаю быстро."
+      "title": "*𝗥𝗘𝗦𝗛𝗢𝗣*",
+      "text": "Небольшой магазин для покупки предметов в Dota 2 по ценам ниже рыночной. По всем вопросам обращайтесь в Telegram."
     },
     "telegram": "https://t.me/r3sh0t",
     "steam": "https://steamcommunity.com/tradeoffer/new/?partner=794480409&token=rdpYLs6f",
