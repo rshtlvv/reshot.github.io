@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-06T23:43:01.881Z",
+  "updatedAt": "2026-11-06T23:43:54.278Z",
   "settings": {
     "name": "reshop",
     "currency": "₽",
@@ -348,7 +348,7 @@
       "rarity": "rare",
       "price": 300,
       "oldPrice": 0,
-      "image": "assets/items/infernus-mw5mdv7q.webp",
+      "image": "assets/items/infernus-mw5mf0u7.webp",
       "status": "in_stock",
       "hit": false,
       "description": "",
