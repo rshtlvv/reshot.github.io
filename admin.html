@@ -114,6 +114,11 @@
         </div>
       </div>
       <div class="image-note" id="image-note">картинка сохраняется вместе с данными</div>
+      <div class="rarity-preview" id="rarity-preview" style="--r:#8847ff">
+        <span class="rarity-preview__dot"></span>
+        <span id="rarity-preview-label">Mythical</span>
+        <span class="rarity-preview__hint">цвет карточки</span>
+      </div>
 
       <label class="label" for="f-image">ссылка на картинку
         <input class="input" id="f-image" placeholder="assets/items/… или https://…" autocomplete="off">
@@ -147,6 +152,12 @@
         <label class="label" for="f-trade">своя ссылка трейда <span class="hint">пусто — общая</span>
           <input class="input" id="f-trade" placeholder="https://steamcommunity.com/tradeoffer/…" autocomplete="off">
         </label>
+        <div class="label span-2">метки на карточке
+          <div class="check-row">
+            <label class="check"><input type="checkbox" id="f-trade-ban"> трейд-бан</label>
+            <label class="check"><input type="checkbox" id="f-gift"> подарок</label>
+          </div>
+        </div>
         <label class="label span-2" for="f-telegram">своя ссылка Telegram <span class="hint">пусто — общая</span>
           <input class="input" id="f-telegram" placeholder="https://t.me/…" autocomplete="off">
         </label>

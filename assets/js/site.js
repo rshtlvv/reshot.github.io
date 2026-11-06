@@ -13,6 +13,10 @@
       '<svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>',
     steam:
       '<svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></svg>',
+    ban:
+      '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.6-5.6"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-13.6 5.6"/><path d="M4 20v-5h5"/></svg>',
+    gift:
+      '<svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M20 8h-2.3c.2-.4.3-.9.3-1.4A3.1 3.1 0 0 0 14.9 3c-1.2 0-2.3.7-2.9 1.8A3.4 3.4 0 0 0 9.1 3 3.1 3.1 0 0 0 6 6.6c0 .5.1 1 .3 1.4H4a2 2 0 0 0-2 2v2h9V8H8.4a1.2 1.2 0 1 1 0-2.4c.7 0 1.2.5 1.2 1.2V12h2V6.8c0-.7.5-1.2 1.2-1.2a1.2 1.2 0 1 1 2.4 0V8H13v4h9v-2a2 2 0 0 0-1-2ZM11 14H3v6a2 2 0 0 0 2 2h6v-8Zm2 8h6a2 2 0 0 0 2-2v-6h-8v8Z"/></svg>',
   };
 
   function hexToRgba(hex, alpha) {
@@ -35,6 +39,7 @@
     .then((store) => {
       renderIntro(store);
       initCatalog(store);
+      initTooltips();
       RS.initChrome();
       document.documentElement.classList.remove('is-booting');
     })
@@ -114,9 +119,17 @@
       const accentSoft = hexToRgba(accent, 0.18);
       const accentGlow = hexToRgba(accent, 0.32);
       const currency = (settings.currency || '₽');
+      const hints = settings.hints || {};
       const meta = [];
       if (item.hero) meta.push('<span>' + RS.esc(item.hero) + '</span>');
       meta.push('<span>' + RS.esc(stock) + '</span>');
+      const flags = [];
+      if (item.tradeBan) {
+        flags.push('<span class="card__flag card__flag--ban" tabindex="0" role="img" aria-label="' + RS.esc(hints.tradeBan || '') + '" data-hint="' + RS.esc(hints.tradeBan || '') + '">' + CARD_ICONS.ban + '</span>');
+      }
+      if (item.gift) {
+        flags.push('<span class="card__flag card__flag--gift" tabindex="0" role="img" aria-label="' + RS.esc(hints.gift || '') + '" data-hint="' + RS.esc(hints.gift || '') + '">' + CARD_ICONS.gift + '</span>');
+      }
       const links = [];
       if (!sold && (actions === 'trade' || actions === 'both') && trade) {
         links.push('<a class="card__action" href="' + RS.esc(trade) + '" target="_blank" rel="noopener" aria-label="Открыть трейд: ' + RS.esc(name) + '" title="Трейд">' + CARD_ICONS.steam + '</a>');
@@ -129,6 +142,7 @@
         '<div class="card__media">' +
         '<img src="' + RS.esc(item.image || RS.PLACEHOLDER) + '" alt="' + RS.esc(name) + '" loading="' + (index < 4 ? 'eager' : 'lazy') + '" width="600" height="400" data-guard>' +
         '<span class="card__rarity"><i></i>' + RS.esc(rarity.label) + '</span>' +
+        (flags.length ? '<div class="card__flags">' + flags.join('') + '</div>' : '') +
         (sold ? '<div class="card__sold"><span>продано</span></div>' : '') +
         '</div>' +
         '<div class="card__body">' +
@@ -151,6 +165,8 @@
       if (grid) {
         grid.innerHTML = shown.map(cardHtml).join('');
         grid.setAttribute('aria-busy', 'false');
+        const tip = $('#tooltip');
+        if (tip) tip.hidden = true;
       }
       if (found) {
         found.innerHTML = list.length + ' ' + pluralRu(list.length, ['предмет', 'предмета', 'предметов']);
@@ -242,5 +258,93 @@
     }
 
     render();
+  }
+
+  function initTooltips() {
+    const tip = document.getElementById('tooltip');
+    const grid = document.getElementById('items');
+    if (!tip || !grid) return;
+
+    let pressTimer = null;
+    let pinned = false;
+    let active = null;
+
+    const hide = () => {
+      clearTimeout(pressTimer);
+      pressTimer = null;
+      tip.hidden = true;
+      if (active) active.classList.remove('is-tip-open');
+      active = null;
+      pinned = false;
+    };
+
+    const place = (flag) => {
+      const rect = flag.getBoundingClientRect();
+      const tipRect = tip.getBoundingClientRect();
+      const margin = 12;
+      let left = rect.left + rect.width / 2 - tipRect.width / 2;
+      left = Math.max(margin, Math.min(left, window.innerWidth - tipRect.width - margin));
+      let top = rect.bottom + 8;
+      if (top + tipRect.height > window.innerHeight - margin) {
+        top = rect.top - tipRect.height - 8;
+      }
+      tip.style.left = left + 'px';
+      tip.style.top = Math.max(margin, top) + 'px';
+    };
+
+    const show = (flag) => {
+      if (!flag || !flag.dataset.hint) return;
+      active = flag;
+      tip.textContent = flag.dataset.hint;
+      tip.hidden = false;
+      flag.classList.add('is-tip-open');
+      requestAnimationFrame(() => place(flag));
+    };
+
+    grid.addEventListener('pointerover', (event) => {
+      if (event.pointerType === 'touch') return;
+      const flag = event.target.closest('.card__flag');
+      if (flag) show(flag);
+    });
+
+    grid.addEventListener('pointerout', (event) => {
+      if (event.pointerType === 'touch') return;
+      const flag = event.target.closest('.card__flag');
+      if (flag && !flag.contains(event.relatedTarget)) hide();
+    });
+
+    grid.addEventListener('focusin', (event) => {
+      const flag = event.target.closest('.card__flag');
+      if (flag) show(flag);
+    });
+
+    grid.addEventListener('focusout', hide);
+
+    grid.addEventListener('pointerdown', (event) => {
+      const flag = event.target.closest('.card__flag');
+      if (!flag || event.pointerType === 'mouse') return;
+      clearTimeout(pressTimer);
+      pressTimer = setTimeout(() => {
+        pinned = true;
+        show(flag);
+      }, 450);
+    });
+
+    ['pointerup', 'pointercancel', 'pointerleave'].forEach((type) => {
+      grid.addEventListener(type, () => {
+        clearTimeout(pressTimer);
+        pressTimer = null;
+        if (!pinned) hide();
+      });
+    });
+
+    document.addEventListener('pointerdown', (event) => {
+      if (tip.hidden) return;
+      if (event.target.closest('.card__flag')) return;
+      hide();
+    });
+
+    window.addEventListener('scroll', hide, { passive: true });
+    window.addEventListener('resize', hide);
   }
 })();

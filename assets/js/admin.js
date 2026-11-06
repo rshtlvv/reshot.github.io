@@ -166,6 +166,8 @@
 
     const itemForm = $('#item-form');
     if (itemForm) itemForm.addEventListener('submit', saveItem);
+    const raritySelect = $('#f-rarity');
+    if (raritySelect) raritySelect.addEventListener('change', updateRarityPreview);
     const deleteBtn = $('#f-delete');
     if (deleteBtn) deleteBtn.addEventListener('click', () => editingId && deleteItem(editingId, true));
 
@@ -306,9 +308,19 @@
         .map((key) => '<option value="' + key + '">' + RS.RARITIES[key].label + '</option>')
         .join('');
     }
-    const names = Array.from(new Set(store.data.items.map((item) => item.hero).filter(Boolean))).sort();
     const datalist = $('#hero-options');
+    const names = Array.from(new Set(store.data.items.map((item) => item.hero).filter(Boolean))).sort();
     if (datalist) datalist.innerHTML = names.map((name) => '<option value="' + RS.esc(name) + '"></option>').join('');
+  }
+
+  function updateRarityPreview() {
+    const select = $('#f-rarity');
+    const box = $('#rarity-preview');
+    const label = $('#rarity-preview-label');
+    if (!select || !box) return;
+    const rarity = RS.RARITIES[select.value] || RS.RARITIES.rare;
+    box.style.setProperty('--r', rarity.color);
+    if (label) label.textContent = rarity.label;
   }
 
   function openEditor(id) {
@@ -334,6 +346,9 @@
     $('#f-stock').value = item ? item.stock : 1;
     $('#f-trade').value = item ? item.trade || '' : '';
     $('#f-telegram').value = item ? item.telegram || '' : '';
+    $('#f-trade-ban').checked = Boolean(item && item.tradeBan);
+    $('#f-gift').checked = Boolean(item && item.gift);
+    updateRarityPreview();
     setImage(item ? item.image : '');
 
     const body = $('.drawer__body');
@@ -446,6 +461,8 @@
       actions,
       trade: ownTrade,
       telegram: $('#f-telegram').value.trim(),
+      tradeBan: $('#f-trade-ban').checked,
+      gift: $('#f-gift').checked,
     };
 
     const items = store.data.items;
@@ -520,6 +537,8 @@
       '<label class="label span-2">Telegram<input class="input" id="s-telegram" value="' + RS.esc(settings.telegram) + '" placeholder="https://t.me/…"></label>' +
       '<label class="label span-2">ссылка трейда Steam<input class="input" id="s-steam" value="' + RS.esc(settings.steam) + '" placeholder="https://steamcommunity.com/tradeoffer/…"></label>' +
       '<label class="label span-2">подпись в футере<textarea class="input" id="s-footer" rows="2">' + RS.esc(settings.footerNote) + '</textarea></label>' +
+      '<label class="label span-2">текст для трейд-бана <span class="hint">при наведении или долгом нажатии на иконку</span><textarea class="input" id="s-hint-ban" rows="2">' + RS.esc((settings.hints && settings.hints.tradeBan) || '') + '</textarea></label>' +
+      '<label class="label span-2">текст для подарка <span class="hint">при наведении или долгом нажатии на иконку</span><textarea class="input" id="s-hint-gift" rows="2">' + RS.esc((settings.hints && settings.hints.gift) || '') + '</textarea></label>' +
       '</div></div>' +
       '<div class="form-actions" style="border-top:0">' +
       '<span class="save-state">изменения сохраняются автоматически</span>' +
@@ -541,6 +560,10 @@
       telegram: val('s-telegram'),
       steam: val('s-steam'),
       footerNote: val('s-footer'),
+      hints: {
+        tradeBan: val('s-hint-ban') || 'Сейчас предмет находится в трейд-бане. Свяжитесь со мной в Telegram, чтобы узнать подробности.',
+        gift: val('s-hint-gift') || 'Этот предмет можно получить только подарком. Свяжитесь со мной в Telegram, чтобы узнать подробности.',
+      },
     });
   }
 

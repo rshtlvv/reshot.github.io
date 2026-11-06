@@ -179,6 +179,8 @@ window.RS = (function () {
       color: normalizeHex(item.color),
       actions: ['telegram', 'trade', 'both'].includes(item.actions) ? item.actions : 'telegram',
       trade: String(item.trade || ''),
+      tradeBan: Boolean(item.tradeBan),
+      gift: Boolean(item.gift),
     };
   }
 
@@ -209,6 +211,11 @@ window.RS = (function () {
     data.settings.rules = String(data.settings.rules || data.settings.telegram || '');
     data.settings.inventory = String(data.settings.inventory || '');
     data.settings.steam = String(data.settings.steam || '');
+    const hints = data.settings.hints || {};
+    data.settings.hints = {
+      tradeBan: String(hints.tradeBan || 'Сейчас предмет находится в трейд-бане. Свяжитесь со мной в Telegram, чтобы узнать подробности.'),
+      gift: String(hints.gift || 'Этот предмет можно получить только подарком. Свяжитесь со мной в Telegram, чтобы узнать подробности.'),
+    };
     return data;
   }
 

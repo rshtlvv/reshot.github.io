@@ -13,7 +13,11 @@ window.RESHOP_SEED = {
     "steam": "https://steamcommunity.com/tradeoffer/new/?partner=794480409&token=rdpYLs6f",
     "inventory": "https://steamcommunity.com/profiles/76561198754746137/inventory",
     "rules": "https://t.me/r3sh0t",
-    "footerNote": "предметы Dota 2 · не связан с Valve"
+    "footerNote": "предметы Dota 2 · не связан с Valve",
+    "hints": {
+      "tradeBan": "Сейчас предмет находится в трейд-бане. Свяжитесь со мной в Telegram, чтобы узнать подробности.",
+      "gift": "Этот предмет можно получить только подарком. Свяжитесь со мной в Telegram, чтобы узнать подробности."
+    }
   },
   "items": [
     {
@@ -30,7 +34,9 @@ window.RESHOP_SEED = {
       "actions": "telegram",
       "trade": "",
       "rarity": "immortal",
-      "color": ""
+      "color": "",
+      "tradeBan": false,
+      "gift": false
     },
     {
       "id": "leonid-luminosity",
@@ -46,7 +52,9 @@ window.RESHOP_SEED = {
       "actions": "telegram",
       "trade": "",
       "rarity": "mythical",
-      "color": ""
+      "color": "",
+      "tradeBan": false,
+      "gift": false
     },
     {
       "id": "flame-of-origin",
@@ -62,7 +70,9 @@ window.RESHOP_SEED = {
       "actions": "telegram",
       "trade": "",
       "rarity": "mythical",
-      "color": ""
+      "color": "",
+      "tradeBan": false,
+      "gift": false
     },
     {
       "id": "photax-fluttercat",
@@ -78,7 +88,9 @@ window.RESHOP_SEED = {
       "actions": "telegram",
       "trade": "",
       "rarity": "immortal",
-      "color": ""
+      "color": "",
+      "tradeBan": false,
+      "gift": false
     },
     {
       "id": "8043ee-gravition-blackguard",
@@ -94,7 +106,9 @@ window.RESHOP_SEED = {
       "actions": "telegram",
       "trade": "",
       "rarity": "mythical",
-      "color": ""
+      "color": "",
+      "tradeBan": false,
+      "gift": false
     },
     {
       "id": "frozen-nova",
@@ -110,7 +124,9 @@ window.RESHOP_SEED = {
       "actions": "telegram",
       "trade": "",
       "rarity": "mythical",
-      "color": ""
+      "color": "",
+      "tradeBan": false,
+      "gift": false
     },
     {
       "id": "photonic-father",
@@ -126,7 +142,9 @@ window.RESHOP_SEED = {
       "actions": "telegram",
       "trade": "",
       "rarity": "mythical",
-      "color": ""
+      "color": "",
+      "tradeBan": false,
+      "gift": false
     },
     {
       "id": "chrononaut-continuum",
@@ -142,7 +160,9 @@ window.RESHOP_SEED = {
       "actions": "telegram",
       "trade": "",
       "rarity": "mythical",
-      "color": ""
+      "color": "",
+      "tradeBan": false,
+      "gift": false
     },
     {
       "id": "reaper-of-the-waning-veil",
@@ -158,7 +178,9 @@ window.RESHOP_SEED = {
       "actions": "telegram",
       "trade": "",
       "rarity": "mythical",
-      "color": ""
+      "color": "",
+      "tradeBan": false,
+      "gift": false
     },
     {
       "id": "astral-schism",
@@ -174,7 +196,9 @@ window.RESHOP_SEED = {
       "actions": "telegram",
       "trade": "",
       "rarity": "mythical",
-      "color": ""
+      "color": "",
+      "tradeBan": false,
+      "gift": false
     },
     {
       "id": "star-sage",
@@ -190,7 +214,9 @@ window.RESHOP_SEED = {
       "actions": "telegram",
       "trade": "",
       "rarity": "mythical",
-      "color": ""
+      "color": "",
+      "tradeBan": false,
+      "gift": false
     },
     {
       "id": "umbral-expanse",
@@ -206,7 +232,9 @@ window.RESHOP_SEED = {
       "actions": "telegram",
       "trade": "",
       "rarity": "mythical",
-      "color": ""
+      "color": "",
+      "tradeBan": false,
+      "gift": false
     },
     {
       "id": "cosmic-cartographer",
@@ -222,7 +250,9 @@ window.RESHOP_SEED = {
       "actions": "telegram",
       "trade": "",
       "rarity": "mythical",
-      "color": ""
+      "color": "",
+      "tradeBan": false,
+      "gift": false
     },
     {
       "id": "narwolf-nebula",
@@ -238,7 +268,9 @@ window.RESHOP_SEED = {
       "actions": "telegram",
       "trade": "",
       "rarity": "mythical",
-      "color": ""
+      "color": "",
+      "tradeBan": false,
+      "gift": false
     },
     {
       "id": "pisces-gemini",
@@ -254,7 +286,9 @@ window.RESHOP_SEED = {
       "actions": "telegram",
       "trade": "",
       "rarity": "mythical",
-      "color": ""
+      "color": "",
+      "tradeBan": false,
+      "gift": false
     },
     {
       "id": "taurid-twilight",
@@ -270,7 +304,9 @@ window.RESHOP_SEED = {
       "actions": "telegram",
       "trade": "",
       "rarity": "mythical",
-      "color": ""
+      "color": "",
+      "tradeBan": false,
+      "gift": false
     }
   ]
 };

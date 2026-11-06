@@ -1040,6 +1040,55 @@ textarea.input::placeholder {
 .image-note.is-error {
   color: var(--accent-2);
 }
+.rarity-preview {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 10px;
+  padding: 5px 8px;
+  border: 1px solid color-mix(in srgb, var(--r) 38%, var(--line));
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--r) 8%, transparent);
+  color: var(--r);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.rarity-preview__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--r);
+  box-shadow: 0 0 8px var(--r);
+}
+.rarity-preview__hint {
+  color: var(--mute);
+  font-family: var(--font-body);
+  font-size: 9.5px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.check-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 9px;
+}
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--dim);
+  font-size: 12.5px;
+  cursor: pointer;
+}
+.check input {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
 
 /* ---------- confirm ---------- */
 
