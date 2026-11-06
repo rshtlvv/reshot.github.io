@@ -177,6 +177,8 @@ window.RS = (function () {
       telegram: String(item.telegram || ''),
       stock,
       color: normalizeHex(item.color),
+      actions: ['telegram', 'trade', 'both'].includes(item.actions) ? item.actions : 'telegram',
+      trade: String(item.trade || ''),
     };
   }
 
@@ -194,15 +196,19 @@ window.RS = (function () {
         const missingStock = item.stock === undefined || item.stock === null || item.stock === '';
         return normalizeItem(missingStock && fallback ? Object.assign({}, item, { stock: fallback.stock }) : item);
       });
-    data.about = data.about || {};
-    data.about.paragraphs = Array.isArray(data.about.paragraphs) ? data.about.paragraphs : [];
-    data.about.stats = Array.isArray(data.about.stats) ? data.about.stats : [];
-    data.about.steps = Array.isArray(data.about.steps) ? data.about.steps : [];
-    data.about.faq = Array.isArray(data.about.faq) ? data.about.faq : [];
     data.settings = data.settings || {};
-    data.settings.hero = data.settings.hero || {};
-    data.settings.hero.facts = Array.isArray(data.settings.hero.facts) ? data.settings.hero.facts : [];
-    data.settings.catalog = data.settings.catalog || {};
+    delete data.about;
+    delete data.settings.hero;
+    delete data.settings.catalog;
+    const intro = data.settings.intro || {};
+    data.settings.intro = {
+      title: String(intro.title || 'Привет. Это *reshop*.'),
+      text: String(intro.text || ''),
+    };
+    data.settings.currency = String(data.settings.currency || '₽');
+    data.settings.rules = String(data.settings.rules || data.settings.telegram || '');
+    data.settings.inventory = String(data.settings.inventory || '');
+    data.settings.steam = String(data.settings.steam || '');
     return data;
   }
 
@@ -432,7 +438,8 @@ window.RS = (function () {
   function pagesUrl() {
     const cfg = state.cfg;
     if (!cfg.owner || !cfg.repo) return '';
-    if (/\.github\.io$/i.test(cfg.repo)) return 'https://' + cfg.owner + '.github.io/';
+    const isUserSite = cfg.repo.toLowerCase() === (cfg.owner + '.github.io').toLowerCase();
+    if (isUserSite) return 'https://' + cfg.owner + '.github.io/';
     return 'https://' + cfg.owner + '.github.io/' + cfg.repo + '/';
   }
 
@@ -653,8 +660,29 @@ window.RS = (function () {
     document.querySelectorAll('[data-steam]').forEach((el) => {
       el.href = steam;
     });
+    const inventory = String(settings.inventory || '').trim();
+    document.querySelectorAll('[data-inventory]').forEach((el) => {
+      if (inventory) {
+        el.href = inventory;
+        el.hidden = false;
+      } else {
+        el.hidden = true;
+      }
+    });
+    const rules = String(settings.rules || settings.telegram || '').trim();
+    document.querySelectorAll('[data-rules]').forEach((el) => {
+      if (rules) {
+        el.href = rules;
+        el.hidden = false;
+      } else {
+        el.hidden = true;
+      }
+    });
     document.querySelectorAll('[data-site-name]').forEach((el) => {
       el.textContent = settings.name || 'reshop';
+    });
+    document.querySelectorAll('[data-footer-note]').forEach((el) => {
+      el.textContent = settings.footerNote || '';
     });
     const chip = document.querySelector('[data-draft-chip]');
     if (chip) chip.hidden = !state.hasDraft;
