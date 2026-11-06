@@ -8,6 +8,13 @@
   const RS = window.RS;
   const $ = (selector, root) => (root || document).querySelector(selector);
 
+  const CARD_ICONS = {
+    telegram:
+      '<svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>',
+    steam:
+      '<svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></svg>',
+  };
+
   function hexToRgba(hex, alpha) {
     const clean = String(hex || '').replace('#', '');
     const full = clean.length === 3 ? clean.split('').map((char) => char + char).join('') : clean.slice(0, 6);
@@ -101,7 +108,7 @@
       const sold = item.status === 'sold';
       const telegram = RS.telegramFor(item);
       const trade = item.trade || settings.steam || '';
-      const stock = item.stock > 1 ? item.stock + ' шт.' : '';
+      const stock = item.stock > 0 ? item.stock + ' шт.' : '0 шт.';
       const rarity = RS.RARITIES[item.rarity] || RS.RARITIES.rare;
       const accent = RS.accentFor(item) || rarity.color;
       const accentSoft = hexToRgba(accent, 0.18);
@@ -109,13 +116,13 @@
       const currency = (settings.currency || '₽');
       const meta = [];
       if (item.hero) meta.push('<span>' + RS.esc(item.hero) + '</span>');
-      if (stock) meta.push('<span>' + RS.esc(stock) + '</span>');
+      meta.push('<span>' + RS.esc(stock) + '</span>');
       const links = [];
       if (!sold && (actions === 'trade' || actions === 'both') && trade) {
-        links.push('<a href="' + RS.esc(trade) + '" target="_blank" rel="noopener">трейд</a>');
+        links.push('<a class="card__action" href="' + RS.esc(trade) + '" target="_blank" rel="noopener" aria-label="Открыть трейд: ' + RS.esc(name) + '" title="Трейд">' + CARD_ICONS.steam + '</a>');
       }
       if (!sold && (actions === 'telegram' || actions === 'both') && telegram) {
-        links.push('<a href="' + RS.esc(telegram) + '" target="_blank" rel="noopener">телеграм</a>');
+        links.push('<a class="card__action" href="' + RS.esc(telegram) + '" target="_blank" rel="noopener" aria-label="Написать в Telegram: ' + RS.esc(name) + '" title="Связаться">' + CARD_ICONS.telegram + '</a>');
       }
       return (
         '<article class="card' + (sold ? ' is-sold' : '') + '" data-id="' + RS.esc(item.id) + '" style="--rarity:' + accent + ';--rarity-soft:' + accentSoft + ';--rarity-glow:' + accentGlow + '">' +

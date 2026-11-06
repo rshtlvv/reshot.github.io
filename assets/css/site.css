@@ -486,21 +486,34 @@ main {
 .card__actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: flex-end;
-  gap: 4px 9px;
-  font-size: 11px;
+  gap: 4px;
 }
-.card__actions a {
-  padding-bottom: 1px;
-  border-bottom: 1px solid transparent;
-  color: var(--dim);
+.card__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: var(--accent);
   transition:
     color 0.25s,
-    border-color 0.25s;
+    background 0.25s,
+    border-color 0.25s,
+    box-shadow 0.25s;
 }
-.card__actions a:hover {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
+.card__action svg {
+  width: 14px;
+  height: 14px;
+}
+.card__action:hover {
+  color: var(--accent-2);
+  border-color: rgba(245, 98, 0, 0.35);
+  background: var(--accent-soft);
+  box-shadow: 0 0 18px -8px var(--accent);
 }
 .card.is-sold .card__media img {
   filter: grayscale(1) brightness(0.5);
@@ -691,12 +704,50 @@ main {
   .catalog__meta {
     margin-top: 15px;
   }
+  .items {
+    gap: 10px;
+  }
+  .card__body {
+    gap: 4px;
+    padding: 9px 9px 10px;
+  }
   .card__title {
-    font-size: 13.5px;
+    font-size: 12.5px;
+    line-height: 1.25;
+  }
+  .card__meta {
+    gap: 4px;
+    font-size: 9.5px;
+  }
+  .card__bottom {
+    gap: 6px;
+    margin-top: 3px;
+    padding-top: 7px;
+  }
+  .price {
+    gap: 3px;
+    font-size: 12.5px;
+  }
+  .price i {
+    font-size: 9.5px;
+  }
+  .card__rarity {
+    top: 6px;
+    left: 6px;
+    gap: 4px;
+    padding: 3px 5px;
+    font-size: 7.5px;
   }
   .card__actions {
-    font-size: 10.5px;
-    gap: 4px 7px;
+    gap: 3px;
+  }
+  .card__action {
+    width: 23px;
+    height: 23px;
+  }
+  .card__action svg {
+    width: 13px;
+    height: 13px;
   }
   .foot__inner {
     flex-direction: column;
@@ -707,13 +758,23 @@ main {
 
 @media (max-width: 420px) {
   .items {
-    grid-template-columns: 1fr;
+    gap: 8px;
   }
   .card__title {
-    font-size: 15px;
+    font-size: 12px;
   }
-  .card__actions {
-    font-size: 11px;
+  .card__meta {
+    font-size: 9px;
+  }
+  .card__bottom {
+    gap: 4px;
+  }
+  .price {
+    font-size: 12px;
+  }
+  .card__action {
+    width: 22px;
+    height: 22px;
   }
 }
 
